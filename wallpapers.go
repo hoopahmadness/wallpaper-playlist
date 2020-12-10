@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-type Wallpaper struct {
+type Wallpaper struct { //add json tags to this
 	name           string
 	filepath       string
 	dateAdded      time.Time
@@ -14,6 +14,7 @@ type Wallpaper struct {
 	tags           []string
 	playlists      []*Playlist
 	skips          []time.Time
+	favorite       bool
 }
 
 //creates a new wallpaper from a filepath
@@ -21,6 +22,7 @@ func newWallpaper(filepath string) *Wallpaper {
 	//parse name from filepath
 	//attempt to set dateAdded based on metadata, or perhaps to today
 	//set date last played to dateAdded
+	//favorite to true
 	//everything else zero
 	return &Wallpaper{}
 }
