@@ -12,7 +12,7 @@ func main() {
 
 	//command line flag (?) to favorite or unfavorite current paper by checking variety's history, loading the master list, updating, and saving it to disk, then exit
 
-	//goroutine to generate new playlist on start (save to disk) and every XX days
+	//goroutine to refresh playlists on start (save to disk) and every XX days
 	//goroutine to change paper on start and again every 10 hours
 
 	//unsorted comments
@@ -28,3 +28,6 @@ func main() {
 	//wait forever, let routines do their thing
 
 }
+
+//function that finds the PID of a running instance of this program, and sends commands to its input
+//https://serverfault.com/questions/178457/can-i-send-some-text-to-the-stdin-of-an-active-process-running-in-a-screen-sessi
